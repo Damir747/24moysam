@@ -770,38 +770,6 @@ figure .static-qr-code {
 	/* Масштабируем изображение, сохраняя пропорции */
 }
 
-/* Кнопки навигации для фотогалереи */
-.photo-gallery-swiper .photo-gallery-next,
-.photo-gallery-swiper .photo-gallery-prev {
-	color: #fff;
-	/* Цвет стрелок */
-	background-color: rgba(0, 0, 0, 0.5);
-	/* Полупрозрачный фон */
-	padding: 10px;
-	border-radius: 50%;
-	transition: background-color 0.3s;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 10;
-}
-
-.photo-gallery-prev {
-	left: 10px;
-	/* Отступ от левого края */
-}
-
-.photo-gallery-next {
-	right: 10px;
-	/* Отступ от правого края */
-}
-
-.photo-gallery-swiper .photo-gallery-next:hover,
-.photo-gallery-swiper .photo-gallery-prev:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-	/* Увеличиваем контраст при наведении */
-}
-
 /* Пагинация для фотогалереи */
 .photo-gallery-swiper .photo-gallery-pagination {
 	bottom: 10px;
@@ -821,21 +789,40 @@ figure .static-qr-code {
 	/* Подсвечиваем активную точку */
 }
 
-/* === Карусель отзывов === */
 .review-carousel .review-next,
-.review-carousel .review-prev {
-	color: #000;
+.review-carousel .review-prev,
+.photo-gallery-swiper .photo-gallery-next,
+.photo-gallery-swiper .photo-gallery-prev {
+	color: #fff;
 	/* Цвет стрелок */
-	background-color: rgba(255, 255, 255, 0.8);
-	/* Фон кнопки */
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Полупрозрачный фон */
 	padding: 10px;
 	border-radius: 50%;
 	transition: background-color 0.3s;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+
+.review-prev,
+.photo-gallery-prev {
+	left: 10px;
+	/* Отступ от левого края */
+}
+
+.review-next,
+.photo-gallery-next {
+	right: 10px;
+	/* Отступ от правого края */
 }
 
 .review-carousel .review-next:hover,
-.review-carousel .review-prev:hover {
-	background-color: rgba(0, 0, 0, 0.5);
+.review-carousel .review-prev:hover,
+.photo-gallery-swiper .photo-gallery-next:hover,
+.photo-gallery-swiper .photo-gallery-prev:hover {
+	background-color: rgba(0, 0, 0, 0.7);
 	/* Фон при наведении */
 }
 
@@ -847,6 +834,8 @@ figure .static-qr-code {
 		/* Подгоняем изображение, чтобы не обрезать его */
 	}
 
+	.review-carousel .review-next,
+	.review-carousel .review-prev,
 	.photo-gallery-swiper .photo-gallery-next,
 	.photo-gallery-swiper .photo-gallery-prev {
 		padding: 5px;

@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			});
 
-			const swiper = new Swiper('.swiper-container', {
+			const reviewCarousel = new Swiper('.review-carousel', {
 				navigation: {
-					nextEl: '.next',
-					prevEl: '.prev',
+					nextEl: '.review-next', // Уникальная кнопка "вперед"
+					prevEl: '.review-prev', // Уникальная кнопка "назад"
 				},
 				loop: true,
 				autoHeight: true,
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 
 			setTimeout(() => {
-				swiper.update();
+				reviewCarousel.update();
 			}, 100);
 		})
 		.catch(error => {

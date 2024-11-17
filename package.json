@@ -1,0 +1,14 @@
+{
+  "name": "Parser Reviews",
+  "version": "1.0.0",
+  "description": "To Parser Reviews from Yandex Maps",
+  "main": "parser.js",
+  "scripts": {
+    "start": "node parser.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "puppeteer": "^11.0.0"
+  }
+}
+

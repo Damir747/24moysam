@@ -1,0 +1,40 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_URI} ^\/$
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !\?
+RewriteCond %{REQUEST_URI} !\&
+RewriteCond %{REQUEST_URI} !\=
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} \/$ 
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)\/$ https://%1/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !\?
+RewriteCond %{REQUEST_URI} !\&
+RewriteCond %{REQUEST_URI} !\=
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} !\/$
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !\?
+RewriteCond %{REQUEST_URI} !\&
+RewriteCond %{REQUEST_URI} !\=
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} \/$
+RewriteCond %{HTTP_HOST} ^([^www].*)$
+RewriteRule ^(.*)\/$ https://%1/$1 [L,R=301]
+
+# Исключаем все лишние слеши.
+RewriteCond %{THE_REQUEST} // 
+RewriteRule .* /$0 [R=301,L] 
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(php|html|htm)\ HTTP/ 
+RewriteRule ^(.*)index\.(php|html|htm)$ https://24moysam.ru/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[^\s]+\s+[^?]*?\?
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule .? %{REQUEST_URI}? [R=301,L]

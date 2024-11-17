@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+Host: https://24moysam.ru
+Clean-param: yandex-source

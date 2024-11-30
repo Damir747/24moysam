@@ -270,7 +270,7 @@ body {
 .review-button {
 	display: inline-block;
 	padding: 10px 20px;
-	background-color: #007bff;
+	background-color: var(--reserve-color);
 	color: white;
 	text-decoration: none;
 	border-radius: 5px;

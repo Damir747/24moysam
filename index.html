@@ -364,29 +364,29 @@
 			<h2 class="h2__header gallery__header">
 				Фотогалерея
 			</h2>
-
-			<div class="swiper-container photo-gallery-swiper">
-				<div class="swiper-wrapper">
-					<!-- Добавьте слайды -->
-					<div class="swiper-slide"><img src="/images/01.jpg" alt="Фото 1"></div>
-					<div class="swiper-slide"><img src="/images/02.jpg" alt="Фото 2"></div>
-					<div class="swiper-slide"><img src="/images/03.jpg" alt="Фото 3"></div>
-					<div class="swiper-slide"><img src="/images/04.jpg" alt="Фото 4"></div>
-					<div class="swiper-slide"><img src="/images/05.jpg" alt="Фото 5"></div>
-					<div class="swiper-slide"><img src="/images/06.jpg" alt="Фото 6"></div>
-					<div class="swiper-slide"><img src="/images/07.jpg" alt="Фото 7"></div>
-					<div class="swiper-slide"><img src="/images/08.jpg" alt="Фото 8"></div>
-					<div class="swiper-slide"><img src="/images/09.jpg" alt="Фото 9"></div>
-					<div class="swiper-slide"><img src="/images/10.jpg" alt="Фото 10"></div>
-					<div class="swiper-slide"><img src="/images/11.jpg" alt="Фото 11"></div>
-					<div class="swiper-slide"><img src="/images/12.jpg" alt="Фото 12"></div>
+			<div class="sw-app-body sw-animation">
+				<div class="swiper-container photo-gallery-swiper">
+					<div class="swiper-wrapper">
+						<!-- Добавьте слайды -->
+						<div class="swiper-slide"><img src="/images/01.jpg" alt="Фото 1"></div>
+						<div class="swiper-slide"><img src="/images/02.jpg" alt="Фото 2"></div>
+						<div class="swiper-slide"><img src="/images/03.jpg" alt="Фото 3"></div>
+						<div class="swiper-slide"><img src="/images/04.jpg" alt="Фото 4"></div>
+						<div class="swiper-slide"><img src="/images/05.jpg" alt="Фото 5"></div>
+						<div class="swiper-slide"><img src="/images/06.jpg" alt="Фото 6"></div>
+						<div class="swiper-slide"><img src="/images/07.jpg" alt="Фото 7"></div>
+						<div class="swiper-slide"><img src="/images/08.jpg" alt="Фото 8"></div>
+						<div class="swiper-slide"><img src="/images/09.jpg" alt="Фото 9"></div>
+						<div class="swiper-slide"><img src="/images/10.jpg" alt="Фото 10"></div>
+						<div class="swiper-slide"><img src="/images/11.jpg" alt="Фото 11"></div>
+						<div class="swiper-slide"><img src="/images/12.jpg" alt="Фото 12"></div>
+					</div>
+					<!-- Добавьте кнопки навигации -->
+					<button class="photo-gallery-prev" aria-label="Предыдущий слайд">&#9664;</button>
+					<button class="photo-gallery-next" aria-label="Следующий слайд">&#9654;</button>
+					<div class="swiper-pagination photo-gallery-pagination"></div>
 				</div>
-				<!-- Добавьте кнопки навигации -->
-				<button class="photo-gallery-prev" aria-label="Предыдущий слайд">&#9664;</button>
-				<button class="photo-gallery-next" aria-label="Следующий слайд">&#9654;</button>
-				<div class="swiper-pagination photo-gallery-pagination"></div>
 			</div>
-
 
 		</div>
 	</div>
@@ -494,18 +494,19 @@
 				</a>
 
 			</div>
-
-			<script type="text/javascript" charset="utf-8" async
-				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ab2f7312b7a3039301556032bd30119b957c41bb42e723637d793155cce053d&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
-				</script>
-
+			<div class="parallax-gap"></div>
+			<div class="yandex-map">
+				<script type="text/javascript" charset="utf-8" async
+					src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5ab2f7312b7a3039301556032bd30119b957c41bb42e723637d793155cce053d&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+					</script>
+			</div>
 		</div>
 	</div>
 
 	<div class="parallax-5"></div>
 
-	<script async="" src="/js/utils.js"></script>
 	<script defer="" src="/js/swiper-bundle.min.js"></script>
+	<script defer="" src="/js/utils.js"></script>
 	<script defer="" src="/js/reviews.js"></script>
 
 	<!-- Yandex.Metrika counter -->

@@ -47,6 +47,10 @@ html {
 	height: 100%;
 }
 
+.parallax-gap {
+	height: calc(100vh - 830px);
+}
+
 h1,
 h2,
 h3 {
@@ -71,11 +75,18 @@ h3 {
 
 .page__section__advantages,
 .page__section__price,
-.page__section__reviews,
 .page__section__address {
-	min-height: 100vh;
+	position: relative;
+	min-height: calc(100vh - 100px);
 }
 
+.page__section__service,
+.page__section__text3,
+.page__section__reviews,
+.page__section__gallery {
+	position: relative;
+	min-height: 50vh;
+}
 
 #floating-button {
 	position: fixed;
@@ -320,6 +331,7 @@ nav a:focus {
 	max-width: 1200px;
 	margin: 0 auto;
 	background-color: transparent;
+	min-height: 100%;
 }
 
 .h1__header {
@@ -334,7 +346,7 @@ nav a:focus {
 }
 
 .h2__header {
-	margin: 0 0 40px 0;
+	margin: 0 0 70px 0;
 	padding: 40px 0;
 }
 
@@ -651,7 +663,7 @@ nav a:focus {
 	min-width: 130px;
 	text-align: center;
 	float: left;
-	margin: 1%;
+	margin: 0.8%;
 	/* Тень при наведении */
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
@@ -750,6 +762,7 @@ figure .static-qr-code {
 	position: relative;
 	/* Установим контекст для позиционирования кнопок */
 	width: 100%;
+	overflow: hidden;
 }
 
 .photo-gallery-swiper .swiper-slide {
@@ -761,6 +774,9 @@ figure .static-qr-code {
 	/* Слайд занимает свою ширину */
 	flex-shrink: 0;
 	/* Не сжимать слайды */
+	display: flex;
+	overflow: hidden;
+	/* Скрыть лишние части контента */
 }
 
 .photo-gallery-swiper .swiper-slide img {
@@ -826,6 +842,14 @@ figure .static-qr-code {
 	/* Фон при наведении */
 }
 
+.yandex-map {
+	position: relative;
+	flex-shrink: 0;
+	height: 400px;
+	margin-top: auto;
+	bottom: 0px;
+}
+
 /* === Адаптивность для галереи === */
 @media (max-width: 768px) {
 
@@ -861,7 +885,7 @@ figure .static-qr-code {
 	.map {
 		padding: 3% 0px;
 		max-height: 250px;
-		width: 22.9%;
+		width: 23%;
 	}
 
 	.map1 {
@@ -909,7 +933,7 @@ figure .static-qr-code {
 	.map {
 		padding: 3% 0px;
 		max-height: 250px;
-		width: 22.9%;
+		width: 23%;
 	}
 
 	.map1 {

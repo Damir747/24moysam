@@ -1,10 +1,12 @@
 :root {
-	--shadow-color: #10E7DC;
-	--secondary-color: #F79E02;
-	--price-color: #0074E1;
-	--menu-color: #1B9CE5;
-	--reserve-color: #6CDAEE;
+	--shadow-color: #57cc99;
+	--secondary-color: #c7f9cc;
+	--price-color: #80ed99;
+	--menu-color: #50AB4E;
+	--reserve-color: #22577a;
 }
+
+/* 50AB4E вместо 38a3a5 */
 
 body,
 html {
@@ -337,12 +339,15 @@ nav a:focus {
 .h1__header {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+	aspect-ratio: 373/51;
 }
 
 .h1__header__image {
 	max-width: 100%;
 	margin: 0;
 	padding: 0;
+	object-fit: cover;
 }
 
 .h2__header {

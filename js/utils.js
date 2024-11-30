@@ -72,7 +72,6 @@ const findElementAll = (container, selector) => {
 
 const photoGallerySwiper = new Swiper('.photo-gallery-swiper', {
 	loop: true,
-	slidesPerView: 3, // Количество слайдов, видимых одновременно
 	spaceBetween: 10, // Расстояние между слайдами
 	navigation: {
 		nextEl: '.photo-gallery-next',
@@ -86,6 +85,17 @@ const photoGallerySwiper = new Swiper('.photo-gallery-swiper', {
 		delay: 3000,
 		disableOnInteraction: false,
 	},
+	breakpoints: {
+		480: {
+			slidesPerView: 1,
+		},
+		640: {
+			slidesPerView: 2,
+		},
+		920: {
+			slidesPerView: 3,
+		}
+	}
 });
 
 

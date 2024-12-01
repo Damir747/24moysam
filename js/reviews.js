@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				loop: true,
 				autoHeight: true,
 				spaceBetween: 10,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
 				slidesPerView: 1,
 				breakpoints: {
 					480: {
